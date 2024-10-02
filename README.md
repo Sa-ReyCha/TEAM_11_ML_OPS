@@ -1,4 +1,4 @@
-# Proyecto MLOps - Equipo 11
+# Proyecto MLOps - Equipo 11 - VERSIÓN (Fase 1 | Avance de Proyecto)
 
 Bienvenidos al repositorio del Proyecto de MLOps del Equipo 11. 
 
