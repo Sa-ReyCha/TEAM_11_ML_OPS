@@ -13,3 +13,22 @@ Aquí encontrarás:
   
   
 Cualquier duda preguntar a los integrantes del equipo
+
+
+# **Sobre los Datos** 
+
+Revisión del Conjunto de Datos: Predictores de Divorcio
+
+
+Descripción General: 
+El conjunto de datos de Predictores de Divorcio fue donado el 23 de julio de 2019 y consiste en información recopilada de participantes que completaron un Formulario de Información Personal y la Escala de Predictores de Divorcio (DPS), basada en la terapia de parejas de Gottman.
+
+Características del Conjunto de Datos:
+Tipo de datos: Multivariado, Univariado
+Área temática: Ciencias Sociales
+Tareas asociadas: Clasificación
+Tipo de características: Enteros
+Número de instancias: 170
+Número de características: 54
+
+Información Adicional: El estudio se centra en predecir el divorcio utilizando la Escala de Predictores de Divorcio (DPS). De los participantes, 84 (49%) estaban divorciados y 86 (51%) eran parejas casadas. La eficacia de la DPS se evaluó utilizando algoritmos de Red Neuronal Multicapa y Árbol de Decisión C4.5.
