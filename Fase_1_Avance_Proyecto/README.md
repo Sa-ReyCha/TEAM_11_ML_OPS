@@ -1,5 +1,8 @@
 # Fase 1 | Avance de Proyecto
 
+<img width="1238" alt="image" src="https://github.com/user-attachments/assets/5a28e7ed-c2a4-4dcb-a7a5-052f9cdaede2">
+
+
 ## Objetivos
 
 Para esta actividad, el alumno demostrará su capacidad para:
