@@ -77,7 +77,7 @@ mlops MNA
 - [ ] **Limpiar los datos** eliminando valores nulos o inconsistentes.  
 - [ ] **Transformar los datos** para prepararlos para análisis y modelado.  
 
-## **Exploración y Preprocesamiento de Datos**
+## **Exploración y Preprocesamiento de Datos** <- Santi
 - [ ] Realizar **análisis exploratorio de datos (EDA)** utilizando visualizaciones y estadísticas descriptivas.  
 - [ ] **Preprocesar datos** aplicando normalización, codificación y/o reducción de dimensionalidad.  
 
@@ -85,7 +85,7 @@ mlops MNA
 - [ ] Utilizar **herramientas de versionado de datos** para mantener un registro de cambios.  
 - [ ] **Documentar las modificaciones** realizadas en los datos.  
 
-## **Construcción, Ajuste y Evaluación de Modelos de Machine Learning**
+## **Construcción, Ajuste y Evaluación de Modelos de Machine Learning** <- Santi
 - [ ] **Seleccionar algoritmos** de Machine Learning adecuados para el problema.  
 - [ ] **Entrenar los modelos** con los datos preprocesados.  
 - [ ] Realizar **ajustes de hiperparámetros** para optimizar el rendimiento.  
