@@ -72,7 +72,7 @@ mlops MNA
 
 # **Pendientes lista** 
 
-## **Manipulación y Preparación de Datos**
+## **Manipulación y Preparación de Datos** <- Juan
 - [ ] **Importar los conjuntos de datos** con los que se trabajará.  
 - [ ] **Limpiar los datos** eliminando valores nulos o inconsistentes.  
 - [ ] **Transformar los datos** para prepararlos para análisis y modelado.  
@@ -81,7 +81,7 @@ mlops MNA
 - [ ] Realizar **análisis exploratorio de datos (EDA)** utilizando visualizaciones y estadísticas descriptivas.  
 - [ ] **Preprocesar datos** aplicando normalización, codificación y/o reducción de dimensionalidad.  
 
-## **Versionado de Datos**
+## **Versionado de Datos** <- Juan
 - [ ] Utilizar **herramientas de versionado de datos** para mantener un registro de cambios.  
 - [ ] **Documentar las modificaciones** realizadas en los datos.  
 
