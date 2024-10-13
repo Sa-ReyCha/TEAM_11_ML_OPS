@@ -1,7 +1,8 @@
 # **Integrantes de la Repo**
-
 sa-reycha - Santiago Reyes Chávez - A01027358
+
 RaulCornadoNi - Raul Coronado Aguirre - A01794653
+
 juanfuentes-code - Juan Angel Fuentes Leon - A1795431
 
 # Proyecto MLOps - Equipo 11 - VERSIÓN (Fase 1 | Avance de Proyecto)
