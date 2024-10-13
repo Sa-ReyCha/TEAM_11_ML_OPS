@@ -1,7 +1,7 @@
 # **Integrantes de la Repo**
 
 sa-reycha - Santiago Reyes Chávez - A01027358
-
+RaulCornadoNi - Raul Coronado Aguirre - A01794653
 
 # Proyecto MLOps - Equipo 11 - VERSIÓN (Fase 1 | Avance de Proyecto)
 
