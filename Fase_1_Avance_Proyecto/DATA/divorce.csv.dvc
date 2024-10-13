@@ -1,0 +1,5 @@
+outs:
+- md5: 1293c49e21c0b2edc4b190007115da6c
+  size: 19192
+  hash: md5
+  path: divorce.csv
