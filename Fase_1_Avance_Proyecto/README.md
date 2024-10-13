@@ -126,7 +126,7 @@ Las mejores prácticas garantizan que el proceso de modelado sea eficiente, repr
 
 ## **Estructuración y Refactorización del Código**
 - [ ] **Organizar el código** en módulos y funciones bien definidas.  
-- [ ] Aplicar **principios de programación orientada a objetos (OOP)**.  
+- [ ] Aplicar  **principios de programación orientada a objetos (OOP)**.  
 - [ ] **Refactorizar el código** para mejorar eficiencia y mantenibilidad.  
 
 
