@@ -13,7 +13,6 @@ def explore_data(data):
 if __name__ == '__main__':
     if len(sys.argv) > 1:
         data_file = sys.argv[1]
-        data = pd.read_csv(data_file)
         explore_data(data)
     else:
         print("Uso: python script.py data.csv")
