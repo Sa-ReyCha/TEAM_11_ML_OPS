@@ -1,3 +1,8 @@
+# **Integrantes de la Repo**
+
+sa-reycha - Santiago Reyes Chávez - A01027358
+
+
 # Proyecto MLOps - Equipo 11 - VERSIÓN (Fase 1 | Avance de Proyecto)
 
 Bienvenidos al repositorio del Proyecto de MLOps del Equipo 11. 
