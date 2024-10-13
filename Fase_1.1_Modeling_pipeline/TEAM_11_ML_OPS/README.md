@@ -59,3 +59,43 @@ mlops MNA
 
 --------
 
+
+
+
+---
+
+# Pendientes
+
+- [ ] Referenciar a repositorios de GitHub mostrando actividad de parte de todos los integrantes del equipo.
+- [ ] Entregar presentación ejecutiva de esta fase en PDF.
+- [ ] Grabar video en equipo (5-10 min) con explicación del trabajo realizado en la fase, incluyendo el link de este video en el documento PDF.
+
+# **Pendientes lista** 
+
+## **Manipulación y Preparación de Datos**
+- [ ] **Importar los conjuntos de datos** con los que se trabajará.  
+- [ ] **Limpiar los datos** eliminando valores nulos o inconsistentes.  
+- [ ] **Transformar los datos** para prepararlos para análisis y modelado.  
+
+## **Exploración y Preprocesamiento de Datos**
+- [ ] Realizar **análisis exploratorio de datos (EDA)** utilizando visualizaciones y estadísticas descriptivas.  
+- [ ] **Preprocesar datos** aplicando normalización, codificación y/o reducción de dimensionalidad.  
+
+## **Versionado de Datos**
+- [ ] Utilizar **herramientas de versionado de datos** para mantener un registro de cambios.  
+- [ ] **Documentar las modificaciones** realizadas en los datos.  
+
+## **Construcción, Ajuste y Evaluación de Modelos de Machine Learning**
+- [ ] **Seleccionar algoritmos** de Machine Learning adecuados para el problema.  
+- [ ] **Entrenar los modelos** con los datos preprocesados.  
+- [ ] Realizar **ajustes de hiperparámetros** para optimizar el rendimiento.  
+- [ ] **Evaluar los modelos** utilizando métricas de rendimiento específicas.  
+
+## **Aplicación de Mejores Prácticas en el Pipeline de Modelado**
+- [ ] Implementar **pipelines automáticos** para preprocesamiento, entrenamiento y evaluación.  
+- [ ] **Documentar cada paso** del pipeline para garantizar reproducibilidad.  
+
+## **Estructuración y Refactorización del Código**
+- [ ] **Organizar el código** en módulos y funciones bien definidas.  
+- [ ] Aplicar **principios de programación orientada a objetos (OOP)**.  
+- [ ] **Refactorizar el código** para mejorar eficiencia y mantenibilidad.  
