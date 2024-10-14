@@ -91,7 +91,7 @@ mlops MNA
 - [ ] Realizar **ajustes de hiperparámetros** para optimizar el rendimiento.  
 - [ ] **Evaluar los modelos** utilizando métricas de rendimiento específicas.  
 
-## **Aplicación de Mejores Prácticas en el Pipeline de Modelado**
+## **Aplicación de Mejores Prácticas en el Pipeline de Modelado** <- Otto
 - [ ] Implementar **pipelines automáticos** para preprocesamiento, entrenamiento y evaluación.  
 - [ ] **Documentar cada paso** del pipeline para garantizar reproducibilidad.  
 
