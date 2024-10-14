@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[18]:
+# In[1]:
 
 
 import sys
@@ -9,6 +9,8 @@ sys.path.append('team_11_ml_ops_module')  # Reemplaza 'team_11' con la ruta corr
 
 from load_data import load_data
 from explore_data import explore_data
+from modeling.train import train_logistic_regression, train_random_forest, train_with_pca
+
 import mlflow
 import mlflow.sklearn
 
@@ -17,17 +19,21 @@ from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
+from sklearn.metrics import classification_report, confusion_matrix, accuracy_score, precision_score, recall_score, f1_score
 
 
-# In[16]:
+# # Se leen los datos de divorcio
+
+# In[2]:
 
 
 datapath = 'DATA/divorce.csv'
 data = load_data(datapath)
 
 
-# In[19]:
+# # Se genera un mlflow con regresion logistica
+
+# In[3]:
 
 
 mlflow.set_tracking_uri("http://localhost:5000")
@@ -84,16 +90,55 @@ with mlflow.start_run() as run:
 print("MLflow experiment completed. Check mlruns folder for results.")
 
 
-# In[ ]:
+# # Pipeline de todos los modelos
+# 
+#  - 1. Regresion logistica
+#    2. Random Forest
+#    3. PCA + Regresion logistica
+
+# In[7]:
 
 
+# Define una función para el entrenamiento y la evaluación
+def run_experiment(model_name, model_func, X, y):
+    with mlflow.start_run():
+        mlflow.log_param("model_name", model_name)
+
+        # Entrenamiento del modelo
+        model, X_test, y_test = model_func(X, y)
+        mlflow.sklearn.log_model(model, "model")  # Registra el modelo en MLflow
+
+        # Evaluación del modelo
+        y_pred = model.predict(X_test)
+
+        accuracy = accuracy_score(y_test, y_pred)
+        precision = precision_score(y_test, y_pred)
+        recall = recall_score(y_test, y_pred)
+        f1 = f1_score(y_test, y_pred)
 
 
+        mlflow.log_metric("accuracy", accuracy)
+        mlflow.log_metric("precision", precision)
+        mlflow.log_metric("recall", recall)
+        mlflow.log_metric("f1_score", f1)
 
-# In[ ]:
+        print(f"Modelo: {model_name}")
+        print(f"Accuracy: {accuracy}")
+        print(f"Precision: {precision}")
+        print(f"Recall: {recall}")
+        print(f"F1-score: {f1}")
 
 
+# Preprocesamiento, entrenamiento y evaluación con MLflow
 
+# Regresión Logística
+run_experiment("Logistic Regression", train_logistic_regression, X, y)
+
+# Random Forest
+run_experiment("Random Forest", train_random_forest, X, y)
+
+# PCA + Regresión Logística
+run_experiment("PCA + Logistic Regression", train_with_pca, X, y)
 
 
 # In[ ]:
