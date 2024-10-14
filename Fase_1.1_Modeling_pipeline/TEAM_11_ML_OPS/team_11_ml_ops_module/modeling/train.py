@@ -6,54 +6,36 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import confusion_matrix, classification_report, accuracy_score
 from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
 
-def train_logistic_regression(X_train_path, y_train_path):
-    X_train = pd.read_csv(X_train_path)
-    y_train = pd.read_csv(y_train_path)
-    
+def train_logistic_regression(X, y):
+    X_train, X_test, y_train, y_test = train_test_split(
+        X, y, test_size=0.2, random_state=42
+    )
     model = LogisticRegression(C=0.1, max_iter=1000, penalty='l1', solver='saga')
-    model.fit(X_train, y_train.values.ravel())
-    return model
+    model.fit(X_train, y_train)
+    return model, X_test, y_test
 
-def train_random_forest(X_train_path, y_train_path):
-    X_train = pd.read_csv(X_train_path)
-    y_train = pd.read_csv(y_train_path)
-
+def train_random_forest(X, y):
+    X_train, X_test, y_train, y_test = train_test_split(
+        X, y, test_size=0.2, random_state=42
+    )
     model = RandomForestClassifier(random_state=42, n_estimators=100)
-    model.fit(X_train, y_train.values.ravel())
-    return model
+    model.fit(X_train, y_train)
+    return model, X_test, y_test
 
-def train_with_pca(X_path, y_path):
-    X = pd.read_csv(X_path)
-    y = pd.read_csv(y_path)
-
+def train_with_pca(X, y):
     pca = PCA(n_components=2)
     X_pca = pca.fit_transform(X)
-
-    # Dividir datos en entrenamiento y prueba
-    from sklearn.model_selection import train_test_split
-    X_train_pca, X_test_pca, y_train, y_test = train_test_split(X_pca, y, test_size=0.2, random_state=42)
-
+    # Separar datos en entrenamiento y prueba
+    X_train_pca, X_test_pca, y_train, y_test = train_test_split(
+        X_pca, y, test_size=0.2, random_state=42
+    )
     # Entrenar un clasificador binario
     model = LogisticRegression()
-    model.fit(X_train_pca, y_train)
-
-    # Hacer predicciones
-    y_pred = model.predict(X_test_pca)
-
-    # Calcular precisión
-    accuracy = accuracy_score(y_test, y_pred)
-    print("Precisión del modelo con PCA:", accuracy)
-
-    # Graficar las predicciones
-    plt.figure(figsize=(8, 6))
-    plt.scatter(X_test_pca[:, 0], X_test_pca[:, 1], c=y_pred, cmap="viridis", alpha=0.7, edgecolors="k")
-    plt.xlabel("Componente principal 1")
-    plt.ylabel("Componente principal 2")
-    plt.title("Predicciones del clasificador binario con PCA")
-    plt.colorbar(label="Predicción")
-    plt.show()
-
+    model.fit(X_pca, y)
+    return model, X_test_pca, y_test
+    
 if __name__ == '__main__':
     model_choice = sys.argv[1]  # Elige el modelo: 'logistic', 'random_forest' o 'pca'
     X_train_path = sys.argv[2]
