@@ -7,24 +7,26 @@ from sklearn.metrics import confusion_matrix, classification_report, accuracy_sc
 from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
+from sklearn.model_selection import GridSearchCV
 
-def train_logistic_regression(X, y):
+def train_logistic_regression(X, y, C, penalty, solver, max_iter):
     X_train, X_test, y_train, y_test = train_test_split(
         X, y, test_size=0.2, random_state=42
     )
-    model = LogisticRegression(C=0.1, max_iter=1000, penalty='l1', solver='saga')
+
+    model = LogisticRegression(C=C, max_iter=max_iter, penalty=penalty, solver=solver)
     model.fit(X_train, y_train)
     return model, X_test, y_test
 
-def train_random_forest(X, y):
+def train_random_forest(X, y, n_estimators, max_depth, min_samples_split, min_samples_leaf):
     X_train, X_test, y_train, y_test = train_test_split(
         X, y, test_size=0.2, random_state=42
     )
-    model = RandomForestClassifier(random_state=42, n_estimators=100)
+    model = RandomForestClassifier(random_state=42, n_estimators=n_estimators, max_depth=max_depth, min_samples_split=min_samples_split, min_samples_leaf=min_samples_leaf)
     model.fit(X_train, y_train)
     return model, X_test, y_test
 
-def train_with_pca(X, y):
+def train_with_pca(X, y, C, penalty, solver, max_iter):
     pca = PCA(n_components=2)
     X_pca = pca.fit_transform(X)
     # Separar datos en entrenamiento y prueba
@@ -32,7 +34,7 @@ def train_with_pca(X, y):
         X_pca, y, test_size=0.2, random_state=42
     )
     # Entrenar un clasificador binario
-    model = LogisticRegression()
+    model = LogisticRegression(C=C, max_iter=max_iter, penalty=penalty, solver=solver)
     model.fit(X_pca, y)
     return model, X_test_pca, y_test
     

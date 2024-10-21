@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/a.ockrassa.morales/Documents/Maestr%C3%ADa/MNA/MLOps/TEAM_11_ML_OPS/Fase_1.1_Modeling_pipeline/TEAM_11_ML_OPS/mlruns/0/1f8f2ccb54e3434b8f4811fbada41eee/artifacts
+end_time: 1729473230790
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 1f8f2ccb54e3434b8f4811fbada41eee
+run_name: abundant-boar-767
+run_uuid: 1f8f2ccb54e3434b8f4811fbada41eee
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1729473222789
+status: 3
+tags: []
+user_id: a.ockrassa.morales
