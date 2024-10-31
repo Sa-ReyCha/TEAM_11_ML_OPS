@@ -1,0 +1,15 @@
+base: 
+  random_stage: 42
+
+data:
+  dataset_csv: '../data/raw/divorce.csv'
+
+train:
+  clf_params:     
+    'C': [0.01, 0.1, 1, 10, 100]         
+    'penalty': ['l1']                      
+    'solver': ['saga', 'liblinear']  
+    'max_iter': [1000, 2000]
+
+reports:
+  # metrics, images, etc
