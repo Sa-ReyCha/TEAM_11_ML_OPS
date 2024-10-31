@@ -7,6 +7,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import confusion_matrix, classification_report, accuracy_score
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
+from src.report.visualization import viz_data_bar_graph, conf_matrix_plot
 
 def train_model_log_reg(X_df_training_scaled, X_df_validation_scaled, y_train, X_val, y_val, hyperparams):
     # Parametros para Log_Reg

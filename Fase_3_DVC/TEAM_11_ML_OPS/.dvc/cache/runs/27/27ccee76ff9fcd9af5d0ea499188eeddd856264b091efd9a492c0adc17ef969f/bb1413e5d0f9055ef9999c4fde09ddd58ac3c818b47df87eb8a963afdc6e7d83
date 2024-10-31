@@ -1,0 +1,27 @@
+cmd: python src/stages/train.py --config=params.yaml
+deps:
+- path: data/processed/X_df_validation_scaled.csv
+  hash: md5
+  md5: da0a6b6c8bf39b053832c4ded420c18b
+  size: 17662
+- path: data/processed/x_df_test_scaled.csv
+  hash: md5
+  md5: af808fc3d8799b18dbf65222ee3dce1c
+  size: 18028
+- path: data/processed/x_df_training_scaled.csv
+  hash: md5
+  md5: 0eee8308949a6e9ebc89740896a9e4fd
+  size: 142699
+- path: src/stages/train.py
+  hash: md5
+  md5: be4a7a658ae5ba78642aeeaa61495f74
+  size: 3091
+outs:
+- path: models/logReg.joblib
+  hash: md5
+  md5: 1fdf4df75768d0de56975831184795a0
+  size: 2063
+- path: models/model_grid_search_logReg.joblib
+  hash: md5
+  md5: d96ba081848121f98aafe6749a79852c
+  size: 2063

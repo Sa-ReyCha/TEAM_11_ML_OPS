@@ -23,7 +23,8 @@ def viz_data_bar_graph(df, columnas):
         ax.set_xlabel('Count')  # Conteo en el eje X
 
     plt.tight_layout()
-    plt.show()
+    plt.savefig(f'reports/{var}.png')
+    # plt.show()
 
 # df_Communication_and_Conflict_Management
 
@@ -37,11 +38,11 @@ def heat_map(data):
             yticklabels=data.columns)
     
 def conf_matrix_plot(conf_matrix, model):    
-    print("Matriz de confusión:")
     disp = ConfusionMatrixDisplay(confusion_matrix=conf_matrix,
                               display_labels=model.classes_)
     disp.plot()
-    plt.show()
+    #plt.show()
+    plt.savefig(f'reports/matrix_conf.png')
 
 def explore_data(data):
     print(data)

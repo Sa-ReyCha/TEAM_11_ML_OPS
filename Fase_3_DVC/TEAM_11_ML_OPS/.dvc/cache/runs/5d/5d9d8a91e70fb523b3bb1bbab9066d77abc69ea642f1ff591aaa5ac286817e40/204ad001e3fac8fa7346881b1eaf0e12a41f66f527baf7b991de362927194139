@@ -1,0 +1,19 @@
+cmd: python src/stages/scale_data.py --config=params.yaml
+deps:
+- path: src/stages/scale_data.py
+  hash: md5
+  md5: f524ef02ae3833ef22a92eb3622181bc
+  size: 1484
+outs:
+- path: data/processed/X_df_validation_scaled.csv
+  hash: md5
+  md5: da0a6b6c8bf39b053832c4ded420c18b
+  size: 17662
+- path: data/processed/x_df_test_scaled.csv
+  hash: md5
+  md5: af808fc3d8799b18dbf65222ee3dce1c
+  size: 18028
+- path: data/processed/x_df_training_scaled.csv
+  hash: md5
+  md5: 0eee8308949a6e9ebc89740896a9e4fd
+  size: 142699

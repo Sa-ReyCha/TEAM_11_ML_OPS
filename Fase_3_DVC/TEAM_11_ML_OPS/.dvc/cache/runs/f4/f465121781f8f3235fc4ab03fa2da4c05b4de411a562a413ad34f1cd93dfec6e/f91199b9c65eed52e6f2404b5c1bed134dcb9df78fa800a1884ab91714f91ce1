@@ -1,0 +1,11 @@
+cmd: python src/stages/data_load.py --config=params.yaml
+deps:
+- path: src/stages/data_load.py
+  hash: md5
+  md5: 434b4cc5b4c9185ac332679f0eeb6910
+  size: 541
+outs:
+- path: data/processed/divorce.csv
+  hash: md5
+  md5: e4111c62ab2216e1f8287f9d07b2f88c
+  size: 19021
