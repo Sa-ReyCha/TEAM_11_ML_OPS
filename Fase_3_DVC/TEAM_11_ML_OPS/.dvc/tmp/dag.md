@@ -7,4 +7,5 @@ flowchart TD
 	node5["train"]
 	node3-->node5
 	node4-->node3
+	node6["file.txt.dvc"]
 ```
