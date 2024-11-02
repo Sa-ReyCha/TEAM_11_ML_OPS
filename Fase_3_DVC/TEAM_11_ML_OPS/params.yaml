@@ -1,0 +1,31 @@
+base: 
+  random_stage: 42
+
+data:
+  dataset_csv: 'data/raw/divorce.csv'
+  dataset_processed_path: 'data/processed/divorce.csv'
+  separated_data: 'data/processed/separated_data_divorce.csv'
+  x_train_csv: 'data/processed/x_train.csv'
+  x_test_csv:  'data/processed/x_test.csv'
+  y_train_csv: 'data/processed/y_train.csv'
+  y_test_csv:  'data/processed/y_test.csv'
+  x_val_csv:   'data/processed/x_val.csv'
+  y_val_csv:   'data/processed/y_val.csv'
+  x_df_training_scaled: 'data/processed/x_df_training_scaled.csv'
+  x_df_validation_scaled: 'data/processed/X_df_validation_scaled.csv'
+  x_df_test_scaled : 'data/processed/x_df_test_scaled.csv'
+
+train:
+  clf_params:     
+    'C': [0.01, 0.1, 1, 10, 100]         
+    'penalty': ['l1']                      
+    'solver': ['saga', 'liblinear']  
+    'max_iter': [1000, 2000]
+  grid_search:
+    'cv': 5
+    'scorin': 'precision'
+  model_path: 
+    'grid_search_log_reg': 'models/model_grid_search_logReg.joblib'
+    'log_reg': 'models/logReg.joblib'
+reports:
+  # metrics, images, etc
