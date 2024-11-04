@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/a.ockrassa.morales/Documents/Maestr%C3%ADa/MNA/MLOps/TEAM_11_ML_OPS/Fase_1.1_Modeling_pipeline/TEAM_11_ML_OPS/mlruns/0/ae622d009db94aeda7ededf2151b0e0c/artifacts
+end_time: 1729472116656
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ae622d009db94aeda7ededf2151b0e0c
+run_name: dapper-trout-595
+run_uuid: ae622d009db94aeda7ededf2151b0e0c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1729472110645
+status: 3
+tags: []
+user_id: a.ockrassa.morales

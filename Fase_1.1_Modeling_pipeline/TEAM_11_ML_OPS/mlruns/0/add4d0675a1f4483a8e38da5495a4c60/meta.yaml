@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/a.ockrassa.morales/Documents/Maestr%C3%ADa/MNA/MLOps/TEAM_11_ML_OPS/Fase_1.1_Modeling_pipeline/TEAM_11_ML_OPS/mlruns/0/add4d0675a1f4483a8e38da5495a4c60/artifacts
+end_time: 1729472064115
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: add4d0675a1f4483a8e38da5495a4c60
+run_name: upbeat-zebra-607
+run_uuid: add4d0675a1f4483a8e38da5495a4c60
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1729472055064
+status: 3
+tags: []
+user_id: a.ockrassa.morales

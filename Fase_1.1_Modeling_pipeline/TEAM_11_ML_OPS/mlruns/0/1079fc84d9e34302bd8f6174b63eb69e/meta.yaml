@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/a.ockrassa.morales/Documents/Maestr%C3%ADa/MNA/MLOps/TEAM_11_ML_OPS/Fase_1.1_Modeling_pipeline/TEAM_11_ML_OPS/mlruns/0/1079fc84d9e34302bd8f6174b63eb69e/artifacts
+end_time: 1729472055012
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 1079fc84d9e34302bd8f6174b63eb69e
+run_name: spiffy-steed-445
+run_uuid: 1079fc84d9e34302bd8f6174b63eb69e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1729472046104
+status: 3
+tags: []
+user_id: a.ockrassa.morales
