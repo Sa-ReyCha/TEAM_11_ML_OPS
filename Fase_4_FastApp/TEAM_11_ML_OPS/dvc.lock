@@ -1,0 +1,133 @@
+schema: '2.0'
+stages:
+  data_load:
+    cmd: python src/stages/data_load.py --config=params.yaml
+    deps:
+    - path: src/stages/data_load.py
+      hash: md5
+      md5: 434b4cc5b4c9185ac332679f0eeb6910
+      size: 541
+    outs:
+    - path: data/processed/divorce.csv
+      hash: md5
+      md5: e4111c62ab2216e1f8287f9d07b2f88c
+      size: 19021
+  data_separation:
+    cmd: python src/stages/separate_data.py --config=params.yaml
+    deps:
+    - path: src/stages/separate_data.py
+      hash: md5
+      md5: 86e02c7f7d7f5c4070051ce6ad08f66a
+      size: 3596
+  split_data:
+    cmd: python src/stages/data_split.py --config=params.yaml
+    deps:
+    - path: src/stages/data_split.py
+      hash: md5
+      md5: e9d75aeabbe8f4eccded44e5d6049957
+      size: 1270
+    outs:
+    - path: data/processed/x_test.csv
+      hash: md5
+      md5: d237c9719b6a3fb583ae8eff0414c8b1
+      size: 2151
+    - path: data/processed/x_train.csv
+      hash: md5
+      md5: 9020fb733b48eac60804612b79aad312
+      size: 15003
+    - path: data/processed/x_val.csv
+      hash: md5
+      md5: 1f559f75b6fed43f34101a20450f8512
+      size: 2151
+    - path: data/processed/y_test.csv
+      hash: md5
+      md5: 37c00569d23f28cdd944a4fc87e8787d
+      size: 40
+    - path: data/processed/y_train.csv
+      hash: md5
+      md5: 882e4c65059f07f7073b386d77404a91
+      size: 278
+    - path: data/processed/y_val.csv
+      hash: md5
+      md5: 94c7c477fda686ef8d742c84bf4a1fee
+      size: 40
+  scale_data:
+    cmd: python src/stages/scale_data.py --config=params.yaml
+    deps:
+    - path: data/processed/x_test.csv
+      hash: md5
+      md5: d237c9719b6a3fb583ae8eff0414c8b1
+      size: 2151
+    - path: data/processed/x_train.csv
+      hash: md5
+      md5: 9020fb733b48eac60804612b79aad312
+      size: 15003
+    - path: data/processed/x_val.csv
+      hash: md5
+      md5: 1f559f75b6fed43f34101a20450f8512
+      size: 2151
+    - path: src/stages/scale_data.py
+      hash: md5
+      md5: f524ef02ae3833ef22a92eb3622181bc
+      size: 1484
+    outs:
+    - path: data/processed/X_df_validation_scaled.csv
+      hash: md5
+      md5: da0a6b6c8bf39b053832c4ded420c18b
+      size: 17662
+    - path: data/processed/x_df_test_scaled.csv
+      hash: md5
+      md5: af808fc3d8799b18dbf65222ee3dce1c
+      size: 18028
+    - path: data/processed/x_df_training_scaled.csv
+      hash: md5
+      md5: 0eee8308949a6e9ebc89740896a9e4fd
+      size: 142699
+  train:
+    cmd: python src/stages/train.py --config=params.yaml
+    deps:
+    - path: data/processed/X_df_validation_scaled.csv
+      hash: md5
+      md5: da0a6b6c8bf39b053832c4ded420c18b
+      size: 17662
+    - path: data/processed/x_df_test_scaled.csv
+      hash: md5
+      md5: af808fc3d8799b18dbf65222ee3dce1c
+      size: 18028
+    - path: data/processed/x_df_training_scaled.csv
+      hash: md5
+      md5: 0eee8308949a6e9ebc89740896a9e4fd
+      size: 142699
+    - path: src/stages/train.py
+      hash: md5
+      md5: be4a7a658ae5ba78642aeeaa61495f74
+      size: 3091
+    outs:
+    - path: models/logReg.joblib
+      hash: md5
+      md5: 8e9d1bdd24287f28f38aebcf6d66daf4
+      size: 2063
+    - path: models/model_grid_search_logReg.joblib
+      hash: md5
+      md5: 869d5bf29ebdfab6e3c89bdbddf46746
+      size: 2063
+  evaluate:
+    cmd: python src/stages/evaluate.py --config=params.yaml
+    deps:
+    - path: models/logReg.joblib
+      hash: md5
+      md5: 8e9d1bdd24287f28f38aebcf6d66daf4
+      size: 2063
+    - path: models/model_grid_search_logReg.joblib
+      hash: md5
+      md5: 869d5bf29ebdfab6e3c89bdbddf46746
+      size: 2063
+    - path: src/stages/evaluate.py
+      hash: md5
+      md5: 2a9db6c88b791c4ea287a81f3112b3b1
+      size: 925
+    outs:
+    - path: reports/matrix_conf.png
+      hash: md5
+      md5: 733acc6b119646dcb43beb82cd2a4561
+      size: 12295

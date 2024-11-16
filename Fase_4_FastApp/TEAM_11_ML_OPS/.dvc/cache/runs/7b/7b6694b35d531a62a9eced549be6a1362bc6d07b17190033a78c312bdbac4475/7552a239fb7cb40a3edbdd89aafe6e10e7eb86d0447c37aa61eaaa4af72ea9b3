@@ -1,0 +1,19 @@
+cmd: python src/stages/evaluate.py --config=params.yaml
+deps:
+- path: models/logReg.joblib
+  hash: md5
+  md5: 9903df5f363d0dd6840814ea51555fb2
+  size: 2063
+- path: models/model_grid_search_logReg.joblib
+  hash: md5
+  md5: 8dff5979084f3fc318e9d555398e2f0d
+  size: 2063
+- path: src/stages/evaluate.py
+  hash: md5
+  md5: 2a9db6c88b791c4ea287a81f3112b3b1
+  size: 925
+outs:
+- path: reports/matrix_conf.png
+  hash: md5
+  md5: 733acc6b119646dcb43beb82cd2a4561
+  size: 12295

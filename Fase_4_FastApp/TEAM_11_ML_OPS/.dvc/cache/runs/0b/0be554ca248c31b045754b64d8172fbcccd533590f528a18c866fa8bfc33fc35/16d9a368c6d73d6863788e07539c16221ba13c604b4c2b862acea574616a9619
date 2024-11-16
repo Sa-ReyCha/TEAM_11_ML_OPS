@@ -1,0 +1,31 @@
+cmd: python src/stages/data_split.py --config=params.yaml
+deps:
+- path: src/stages/data_split.py
+  hash: md5
+  md5: e9d75aeabbe8f4eccded44e5d6049957
+  size: 1270
+outs:
+- path: data/processed/x_test.csv
+  hash: md5
+  md5: d237c9719b6a3fb583ae8eff0414c8b1
+  size: 2151
+- path: data/processed/x_train.csv
+  hash: md5
+  md5: 9020fb733b48eac60804612b79aad312
+  size: 15003
+- path: data/processed/x_val.csv
+  hash: md5
+  md5: 1f559f75b6fed43f34101a20450f8512
+  size: 2151
+- path: data/processed/y_test.csv
+  hash: md5
+  md5: 37c00569d23f28cdd944a4fc87e8787d
+  size: 40
+- path: data/processed/y_train.csv
+  hash: md5
+  md5: 882e4c65059f07f7073b386d77404a91
+  size: 278
+- path: data/processed/y_val.csv
+  hash: md5
+  md5: 94c7c477fda686ef8d742c84bf4a1fee
+  size: 40
