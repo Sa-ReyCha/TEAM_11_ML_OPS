@@ -12,4 +12,18 @@ pip
 python-dotenv
 scikit-learn
 pytest
+fastapi # fase 4
+seaborn 
+uvicorn
 -e .
+
+
+# GOOGLE DRIVE LINK 
+# https://drive.google.com/drive/folders/1ADIaZigf3qGJEpSbPHNtBer_ZEKxskbW?usp=share_link
+
+#1.   pip install 'dvc[gdrive]'
+
+#2. **Add the Google Drive remote** to your DVC project. You will use a special URL format for Google Drive. Based on the folder link you provided, the `folder_id` portion of the URL is `1ADIaZigf3qGJEpSbPHNtBer_ZEKxskbW`. 
+
+#.3. dvc remote add -d myremote gdrive://1ADIaZigf3qGJEpSbPHNtBer_ZEKxskbW 
+

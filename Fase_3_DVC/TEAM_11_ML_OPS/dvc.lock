@@ -105,22 +105,22 @@ stages:
     outs:
     - path: models/logReg.joblib
       hash: md5
-      md5: 1fdf4df75768d0de56975831184795a0
+      md5: 8e9d1bdd24287f28f38aebcf6d66daf4
       size: 2063
     - path: models/model_grid_search_logReg.joblib
       hash: md5
-      md5: d96ba081848121f98aafe6749a79852c
+      md5: 869d5bf29ebdfab6e3c89bdbddf46746
       size: 2063
   evaluate:
     cmd: python src/stages/evaluate.py --config=params.yaml
     deps:
     - path: models/logReg.joblib
       hash: md5
-      md5: 1fdf4df75768d0de56975831184795a0
+      md5: 8e9d1bdd24287f28f38aebcf6d66daf4
       size: 2063
     - path: models/model_grid_search_logReg.joblib
       hash: md5
-      md5: d96ba081848121f98aafe6749a79852c
+      md5: 869d5bf29ebdfab6e3c89bdbddf46746
       size: 2063
     - path: src/stages/evaluate.py
       hash: md5
