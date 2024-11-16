@@ -9,7 +9,7 @@ juanfuentes-code - Juan Angel Fuentes Leon - A1795431
 
 fran-dev-front - Francisco Marmolejo Martinez - A01794882
 
-# Proyecto MLOps - Equipo 11 - VERSIÓN (Fase 1 | Avance de Proyecto)
+# Proyecto MLOps - Equipo 11 - VERSIÓN (Fase 4 | Avance de Proyecto)
 
 Bienvenidos al repositorio del Proyecto de MLOps del Equipo 11. 
 
